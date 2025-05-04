@@ -49,6 +49,10 @@ std::string Mob::getName() const{
     return name;
 }
 
+int Mob::getMobCount() const{
+    return mobCount;
+}
+
 Mob::~Mob(){//can only be one destructor cause destructors dont take arguments
     delete unsafeGoldPouch;
 }

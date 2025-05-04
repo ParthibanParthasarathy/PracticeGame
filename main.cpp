@@ -1,8 +1,20 @@
 //no need for include iostream and include string because it is included in the Mob.h
 #include "Mob.h"
 
+class Tree
+{
+    private:
+        static int objectCount;//static member variable
+    public:
+        Tree() //constrcutor
+            {objectCount++;}
+        static int getObjectCount() //accesor function
+            {return objectCount;}
+};
 
-
+//definition of static member variable written outside class.
+int Tree::objectCount = 0;
+int Mob::mobCount = 0;
 
 int main() {
 
@@ -10,7 +22,11 @@ int main() {
     std::string hello = "Hello World!";    
     std::cout << hello << std::endl;
 
-    
+
+
+    Tree oak;
+    Tree cyprus;
+    Tree redwood;    
 
     
 

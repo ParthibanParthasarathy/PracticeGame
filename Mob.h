@@ -5,6 +5,7 @@
 
 class Mob {
     private:
+        static int mobCount; //static member variable
         std::string name;
         int hp;
         int atk;
@@ -26,6 +27,8 @@ class Mob {
 
         void setName(std::string);
         std::string getName() const;
+
+        int getMobCount() const;
 
         ~Mob(); //destructor
 };
